@@ -13,3 +13,9 @@ List topics in cluster
 ```bash
 bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 ```
+
+Delete topics in a cluster
+
+```bash
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic topic-1,topic-2
+```
