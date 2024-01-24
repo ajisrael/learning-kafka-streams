@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # create input topic with two partitions
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic word-count-input
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 2 --topic word-count-input
 
 # create output topic
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic word-count-output
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 2 --topic word-count-output
 
 # launch a Kafka consumer
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \
@@ -28,4 +28,4 @@ mvn clean package
 java -jar <your jar here>.jar
 
 # list all topics that we have in Kafka (so we can observe the internal topics)
-bin/kafka-topics.sh --list --zookeeper localhost:2181
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
