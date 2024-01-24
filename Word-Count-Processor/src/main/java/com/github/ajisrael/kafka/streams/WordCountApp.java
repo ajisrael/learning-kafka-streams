@@ -6,7 +6,7 @@ import org.apache.kafka.streams.StreamsConfig;
 
 import java.util.Properties;
 
-public class StreamsStarterApp {
+public class WordCountApp {
 
     public static void main(String[] args) {
         Properties config = new Properties();
