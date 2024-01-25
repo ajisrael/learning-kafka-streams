@@ -23,7 +23,8 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \
 # launch the streams application
 
 # then produce data to it
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic favourite-colour-input
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic favorite-color-input \
+--property "parse.key=true" --property "key.separator=,"
 #
 stephane,blue
 john,green
